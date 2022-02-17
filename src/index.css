@@ -1,0 +1,360 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:hover{
+   text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+nav{
+  height: 50px;
+  background-color: #333333;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 7px #000;
+  color: white;
+}
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+li {
+  list-style-type: none;
+}
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+ul:nth-child(1) li {
+  font-size: 30px;
+  font-weight: 600;
+}
+ul:nth-child(2) li {
+  margin-right: 20px;
+}
+ul:nth-child(2) li:last-child {
+  margin: 0;
+}
+ul:nth-child(2) li {
+  font-size: 19px;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.home_page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px;
+  background-color: black;
+  /* background: url("../img/poster_2.jpeg"); 
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.footer_info {
+  width: 1005;
+  height: 120px;
+  background-color: rgb(48, 48, 48);
+}
+.movies_card {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  /* background: url("../img/poster.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.card {
+  width: 265px;
+  height: 500px; 
+  background-color: rgb(48, 48, 48);
+  border-radius: 10px; 
+  margin-bottom: 40px; 
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+}
+.card_title {
+  text-align: center;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card_title h1 {
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0;
+}
+.card_title h3 {
+  font-size: 18px;
+  margin-top: -20px;
+}
+.card_title h4 {
+  font-size: 17px;
+  margin-top: -20px;
+  font-style: italic;
+  color: rgb(121, 121, 121);
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+input {
+  border-radius: 5px;
+  margin-right: 15px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px;
+}
+button {
+  border-radius: 5px;
+  margin-right: 15px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px;
+  transition: .4s;
+  background-color: rgb(161, 170, 32);
+}
+button:hover {
+  background-color: rgb(240, 255, 25);
+} 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translateY(250%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.spiner {
+  width: 100%;
+  height: 100%; 
+  border-radius: 50%;
+  border-top: 5px solid rgba(255, 0, 0, 0);
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  border-left: 5px solid white;
+  animation: spiner 1.2s infinite;
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* MEDIA ----------------------------------*/
+@media  (max-width:821px) {
+    .card {
+      width: 240px;
+      height: 480px;
+    }
+}
+@media  (max-width:769px) {
+  nav {
+    max-width: 768px;
+  }
+  .movies_card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media  (max-width:426px) {
+  nav {
+    max-width: 425px;
+    height: 250px;
+  }
+  .nav_link {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_link ul:nth-child(1) li {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+  }
+  .nav_link ul:nth-child(2) li {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  .nav_link ul:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .nav_link ul:nth-child(2) li:last-child {
+    margin-left: -1px;
+  }
+  .card {
+    width: 350px;
+    height: 750px;
+  }
+  .movies_card {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .home_page {
+    padding: 0;
+    margin-top: -20px;
+  }
+  input {
+    width: 50%;
+    margin-top: 20px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+@media  (max-width:376px) {
+  nav {
+    max-width: 375px;
+    height: 250px; 
+  }
+  .nav_link {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_link ul:nth-child(1) li {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    text-decoration: none;
+  }
+  .nav_link ul:nth-child(2) li {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  .nav_link ul:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .nav_link ul:nth-child(2) li:last-child {
+    margin-left: -1px;
+  }
+  .card {
+    width: 100%;
+    height: 750px;
+  }
+  .card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+  .home_page {
+    padding: 0;
+  }
+  .movies_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    width: 80%;
+  }
+  
+}
+@media  (max-width:321px) {
+  nav {
+    max-width: 322px;
+    height: 250px;
+  }
+  .nav_link {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_link ul:nth-child(1) li {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    text-decoration: none;
+  }
+  .nav_link ul:nth-child(2) li {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  .nav_link ul:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .nav_link ul:nth-child(2) li:last-child {
+    margin-left: -1px;
+  } 
+  .card {
+    width: 100%;
+    height: 500px;
+  }
+  .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .home_page {
+    padding: 0;
+  }
+  input {
+    width: 60%;
+  }
+  @media  (max-width:281px) {
+    nav {
+      max-width: 100%;
+    }
+    .card {
+      width: 100%;
+      margin: 0 auto 20px auto;
+    }
+    .card img {
+      width: 100%;
+    }
+  }
+}
